@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "809607936703",
+    "project_id": "rapid-project-1494b",
+    "storage_bucket": "rapid-project-1494b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809607936703:android:cbdc39b71ffcf397b9a40a",
+        "android_client_info": {
+          "package_name": "com.example.philips_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVctgxsZkNJR-u1-KPuAnVkaDsH9mWGPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809607936703:android:5c68aee648dad68cb9a40a",
+        "android_client_info": {
+          "package_name": "com.example.product_client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVctgxsZkNJR-u1-KPuAnVkaDsH9mWGPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809607936703:android:1bec65671fef8f6db9a40a",
+        "android_client_info": {
+          "package_name": "com.example.production_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVctgxsZkNJR-u1-KPuAnVkaDsH9mWGPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,6 +12,7 @@ dependencies:
   flutter_card_swiper: ^7.0.0
   firebase_core: ^2.25.4
   cloud_firestore: ^4.15.5
+  audioplayers: ^5.2.1
   get: ^4.6.6
   flutter:
     sdk: flutter

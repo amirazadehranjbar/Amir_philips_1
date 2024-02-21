@@ -1,9 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:philips_1/pages/First_Page/first_page.dart';
+import 'package:philips_1/my_firebase_options.dart';
+import 'package:philips_1/pages/home_page/home_page.dart';
+import 'package:philips_1/pages/select_langauge/select_langauge_page.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.dark(useMaterial3: true),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      home:  FirstPage(),
+      home:  SelectLanguagePage(),
     );
   }
 }

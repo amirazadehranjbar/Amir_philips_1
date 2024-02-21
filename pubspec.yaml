@@ -35,6 +35,9 @@ flutter:
   assets:
       - assets/images/logo/philips_shield.png
       - assets/images/select_action_page_images/HowWeHear.png
+      - assets/images/select_action_page_images/hearing_disorders.png
+      - assets/images/select_action_page_images/Hearing_Lost.png
+      - assets/images/select_action_page_images/Hearing_Tests.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

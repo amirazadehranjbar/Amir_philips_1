@@ -31,12 +31,25 @@ class $AssetsImagesLogoGen {
 class $AssetsImagesSelectActionPageImagesGen {
   const $AssetsImagesSelectActionPageImagesGen();
 
+  /// File path: assets/images/select_action_page_images/Hearing_Lost.png
+  AssetGenImage get hearingLost => const AssetGenImage(
+      'assets/images/select_action_page_images/Hearing_Lost.png');
+
+  /// File path: assets/images/select_action_page_images/Hearing_Tests.png
+  AssetGenImage get hearingTests => const AssetGenImage(
+      'assets/images/select_action_page_images/Hearing_Tests.png');
+
   /// File path: assets/images/select_action_page_images/HowWeHear.png
   AssetGenImage get howWeHear => const AssetGenImage(
       'assets/images/select_action_page_images/HowWeHear.png');
 
+  /// File path: assets/images/select_action_page_images/hearing_disorders.png
+  AssetGenImage get hearingDisorders => const AssetGenImage(
+      'assets/images/select_action_page_images/hearing_disorders.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [howWeHear];
+  List<AssetGenImage> get values =>
+      [hearingLost, hearingTests, howWeHear, hearingDisorders];
 }
 
 class Assets {

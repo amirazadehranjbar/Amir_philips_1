@@ -42,10 +42,9 @@ class SelectActionPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //////////////************************ Row 1 for How We Hear __ Hearing Disorders ***********************///
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ///*************** How We Hear InkWell **********************************************************///
                 InkWell(
@@ -72,7 +71,39 @@ class SelectActionPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
                             child: Image.asset(
                               Assets.images.selectActionPageImages.howWeHear.path,
-                              height: size.height * 0.1,
+                              height: size.height * 0.2,
+                              fit: BoxFit.fill,
+                            ))
+                      ],
+                    ),
+                  ),
+                ),
+                ///*************** Hearing Disorders InkWell **********************************************************///
+                InkWell(
+                  onTap: (){},
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.black45,
+                        border:
+                        Border.all(color: MyColors.philips_yellow, width: 3)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ////*********** HowWeHear Text ***************///
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child:
+                          Text("Hearing Disorders", style: MyTextStyles.medium_1),
+                        ),
+
+                        ////*********** HowWeHear Image ***************///
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset(
+                              Assets.images.selectActionPageImages.hearingDisorders.path,
+                              height: size.height * 0.2,
                               fit: BoxFit.fill,
                             ))
                       ],
@@ -80,7 +111,78 @@ class SelectActionPage extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            SizedBox(height: size.height*0.1,),
+            //////////////************************ Row 2 for Hearing Lost __ Hearing Test ***********************///
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ///*************** Hearing Lost InkWell **********************************************************///
+                InkWell(
+                  onTap: (){},
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.black45,
+                        border:
+                        Border.all(color: MyColors.philips_yellow, width: 3)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ////*********** HowWeHear Text ***************///
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child:
+                          Text("Hearing Lost", style: MyTextStyles.medium_1),
+                        ),
+
+                        ////*********** HowWeHear Image ***************///
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset(
+                              Assets.images.selectActionPageImages.hearingLost.path,
+                              height: size.height * 0.2,
+                              fit: BoxFit.fill,
+                            ))
+                      ],
+                    ),
+                  ),
+                ),
+                ///*************** Hearing Test InkWell **********************************************************///
+                InkWell(
+                  onTap: (){},
+                  borderRadius: BorderRadius.circular(15),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.black45,
+                        border:
+                        Border.all(color: MyColors.philips_yellow, width: 3)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ////*********** HowWeHear Text ***************///
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child:
+                          Text("Hearing Test", style: MyTextStyles.medium_1),
+                        ),
+
+                        ////*********** HowWeHear Image ***************///
+                        ClipRRect(
+                            borderRadius: BorderRadius.circular(15),
+                            child: Image.asset(
+                              Assets.images.selectActionPageImages.hearingTests.path,
+                              height: size.height * 0.2,
+                              fit: BoxFit.fill,
+                            ))
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),

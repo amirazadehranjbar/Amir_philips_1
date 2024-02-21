@@ -31,6 +31,10 @@ class $AssetsImagesLogoGen {
 class $AssetsImagesSelectActionPageImagesGen {
   const $AssetsImagesSelectActionPageImagesGen();
 
+  /// File path: assets/images/select_action_page_images/HearingLost_Simulator.png
+  AssetGenImage get hearingLostSimulator => const AssetGenImage(
+      'assets/images/select_action_page_images/HearingLost_Simulator.png');
+
   /// File path: assets/images/select_action_page_images/Hearing_Lost.png
   AssetGenImage get hearingLost => const AssetGenImage(
       'assets/images/select_action_page_images/Hearing_Lost.png');
@@ -47,9 +51,19 @@ class $AssetsImagesSelectActionPageImagesGen {
   AssetGenImage get hearingDisorders => const AssetGenImage(
       'assets/images/select_action_page_images/hearing_disorders.png');
 
+  /// File path: assets/images/select_action_page_images/philips_hearlink.png
+  AssetGenImage get philipsHearlink => const AssetGenImage(
+      'assets/images/select_action_page_images/philips_hearlink.png');
+
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [hearingLost, hearingTests, howWeHear, hearingDisorders];
+  List<AssetGenImage> get values => [
+        hearingLostSimulator,
+        hearingLost,
+        hearingTests,
+        howWeHear,
+        hearingDisorders,
+        philipsHearlink
+      ];
 }
 
 class Assets {

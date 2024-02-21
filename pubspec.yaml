@@ -38,6 +38,8 @@ flutter:
       - assets/images/select_action_page_images/hearing_disorders.png
       - assets/images/select_action_page_images/Hearing_Lost.png
       - assets/images/select_action_page_images/Hearing_Tests.png
+      - assets/images/select_action_page_images/philips_hearlink.png
+      - assets/images/select_action_page_images/HearingLost_Simulator.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

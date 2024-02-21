@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:philips_1/my_firebase_options.dart';
 import 'package:philips_1/pages/home_page/home_page.dart';
+import 'package:philips_1/pages/select_action_page/select_action_page.dart';
 import 'package:philips_1/pages/select_langauge/select_langauge_page.dart';
 
 import 'firebase_options.dart';
@@ -26,9 +27,18 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData.dark(useMaterial3: true),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      home:  SelectLanguagePage(),
+      home: SelectLanguagePage(),
+      getPages: [
+        GetPage(name: '/', page: () => SelectLanguagePage()),
+        GetPage(
+            name: '/SelectActionPage',
+            page: () => SelectActionPage(),
+            transition: Transition.fadeIn,
+            curve: Easing.emphasizedAccelerate,
+            transitionDuration: const Duration(seconds: 2)),
+        // GetPage(name: '/third', page: () => Third()),
+        // GetPage(name: "/fourth", page: () => Fourth()),
+      ],
     );
   }
 }
-
-

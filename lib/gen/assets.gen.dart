@@ -13,6 +13,8 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   $AssetsImagesLogoGen get logo => const $AssetsImagesLogoGen();
+  $AssetsImagesSelectActionPageImagesGen get selectActionPageImages =>
+      const $AssetsImagesSelectActionPageImagesGen();
 }
 
 class $AssetsImagesLogoGen {
@@ -24,6 +26,17 @@ class $AssetsImagesLogoGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [philipsShield];
+}
+
+class $AssetsImagesSelectActionPageImagesGen {
+  const $AssetsImagesSelectActionPageImagesGen();
+
+  /// File path: assets/images/select_action_page_images/HowWeHear.png
+  AssetGenImage get howWeHear => const AssetGenImage(
+      'assets/images/select_action_page_images/HowWeHear.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [howWeHear];
 }
 
 class Assets {

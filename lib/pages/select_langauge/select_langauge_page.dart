@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:philips_1/gen/assets.gen.dart';
+import 'package:philips_1/pages/select_action_page/select_action_page.dart';
 import 'package:philips_1/text_styles_colors/my_colors.dart';
 import 'package:philips_1/text_styles_colors/text_styles.dart';
 
@@ -23,6 +25,7 @@ class SelectLanguagePage extends StatelessWidget {
               borderRadius: BorderRadius.circular(10)),
           backgroundColor: Colors.black45,
           toolbarHeight: size.height * 0.1,
+          elevation: 30,
           actions: [
             Padding(
               padding: const EdgeInsets.fromLTRB(30, 8, 60, 8),
@@ -85,7 +88,9 @@ class SelectLanguagePage extends StatelessWidget {
                 children: [
                   ///****** Button English ************************************************///
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed("SelectActionPage");
+                    },
                     style: ButtonStyle(
                         backgroundColor:
                             const MaterialStatePropertyAll(Colors.black45),

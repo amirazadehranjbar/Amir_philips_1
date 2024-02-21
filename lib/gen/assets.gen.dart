@@ -90,7 +90,13 @@ class $AssetsImagesSimulatorPageImageGen {
 class Assets {
   Assets._();
 
+  static const String forest = 'assets/forest.wav';
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const String ocean = 'assets/ocean.wav';
+  static const String restaurant = 'assets/restaurant.mp3';
+
+  /// List of all assets
+  static List<String> get values => [forest, ocean, restaurant];
 }
 
 class AssetGenImage {

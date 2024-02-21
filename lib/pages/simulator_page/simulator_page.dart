@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 
 import '../../gen/assets.gen.dart';
@@ -6,11 +7,49 @@ import '../../text_styles_colors/my_colors.dart';
 import '../../text_styles_colors/text_styles.dart';
 
 class SimulatorPage extends StatelessWidget {
-  const SimulatorPage({super.key});
+   SimulatorPage({super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+
+    List<GestureDetector> cards = [
+      GestureDetector(
+        onDoubleTap: () {
+          // Call your function here when the first container is double-tapped
+          // For example, you can show a dialog, navigate to another screen, etc.
+          print("Double-tap on the first container");
+        },
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Colors.white70, width: 4)),
+          height: size.height*0.4,
+          width: size.width*0.4,
+          child: Text("Images 1"),
+        ),
+      ),
+      GestureDetector(
+        onDoubleTap: () {
+          // Call your function here when the second container is double-tapped
+          // For example, you can show a dialog, navigate to another screen, etc.
+          print("Double-tap on the second container");
+        },
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Colors.black45, width: 4)),
+          height: size.height*0.4,
+          width: size.width*0.4,
+          child: Text("Images 2"),
+        ),
+      ),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -56,6 +95,19 @@ class SimulatorPage extends StatelessWidget {
                       child: Text("First Select Environment"),
                     )
                 ),
+                Flexible(
+                  child: SizedBox(
+                    height: size.height*0.4,
+                    width: size.width*0.4,// Adjust the height as needed
+                    child: CardSwiper(
+                      cardsCount: cards.length,
+                      duration: const Duration(seconds: 2),
+                      cardBuilder: (context, index, percentThresholdX, percentThresholdY) =>
+                      cards[index],
+                    ),
+                  ),
+                ),
+
               ],
             )
 

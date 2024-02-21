@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../text_styles_colors/my_colors.dart';
@@ -38,7 +39,9 @@ class SelectActionPage extends StatelessWidget {
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.menu),
-              onPressed: () { Scaffold.of(context).openDrawer(); },
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
               tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
             );
           },
@@ -86,35 +89,38 @@ class SelectActionPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //////////////************************ Row 1 for How We Hear __ Hearing Disorders ***********************///
-              SizedBox(height: size.height*0.1,),
+              SizedBox(
+                height: size.height * 0.1,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ///*************** Hearing Lost InkWell **********************************************************///
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.black45,
-                          border:
-                              Border.all(color: MyColors.philips_yellow, width: 3)),
+                          border: Border.all(
+                              color: MyColors.philips_yellow, width: 3)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ////*********** Hearing Lost Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                                Text("How We Hear", style: MyTextStyles.medium_1),
+                            child: Text("How We Hear",
+                                style: MyTextStyles.medium_1),
                           ),
 
                           ////*********** Hearing Lost Image ***************///
                           ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                Assets.images.selectActionPageImages.howWeHear.path,
+                                Assets.images.selectActionPageImages.howWeHear
+                                    .path,
                                 height: size.height * 0.2,
                                 fit: BoxFit.fill,
                               ))
@@ -122,31 +128,33 @@ class SelectActionPage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   ///*************** Hearing Disorders InkWell **********************************************************///
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.black45,
-                          border:
-                          Border.all(color: MyColors.philips_yellow, width: 3)),
+                          border: Border.all(
+                              color: MyColors.philips_yellow, width: 3)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ////*********** HowWeHear Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                            Text("Hearing Disorders", style: MyTextStyles.medium_1),
+                            child: Text("Hearing Disorders",
+                                style: MyTextStyles.medium_1),
                           ),
 
                           ////*********** HowWeHear Image ***************///
                           ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                Assets.images.selectActionPageImages.hearingDisorders.path,
+                                Assets.images.selectActionPageImages
+                                    .hearingDisorders.path,
                                 height: size.height * 0.2,
                                 fit: BoxFit.fill,
                               ))
@@ -156,36 +164,39 @@ class SelectActionPage extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: size.height*0.1,),
+              SizedBox(
+                height: size.height * 0.1,
+              ),
               //////////////************************ Row 2 for Hearing Lost __ Hearing Test ***********************///
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ///*************** Hearing Lost InkWell **********************************************************///
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.black45,
-                          border:
-                          Border.all(color: MyColors.philips_yellow, width: 3)),
+                          border: Border.all(
+                              color: MyColors.philips_yellow, width: 3)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ////*********** HowWeHear Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                            Text("Hearing Lost", style: MyTextStyles.medium_1),
+                            child: Text("Hearing Lost",
+                                style: MyTextStyles.medium_1),
                           ),
 
                           ////*********** HowWeHear Image ***************///
                           ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                Assets.images.selectActionPageImages.hearingLost.path,
+                                Assets.images.selectActionPageImages.hearingLost
+                                    .path,
                                 height: size.height * 0.2,
                                 fit: BoxFit.fill,
                               ))
@@ -193,31 +204,33 @@ class SelectActionPage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   ///*************** Hearing Test InkWell **********************************************************///
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.black45,
-                          border:
-                          Border.all(color: MyColors.philips_yellow, width: 3)),
+                          border: Border.all(
+                              color: MyColors.philips_yellow, width: 3)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ////*********** HowWeHear Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                            Text("Hearing Test", style: MyTextStyles.medium_1),
+                            child: Text("Hearing Test",
+                                style: MyTextStyles.medium_1),
                           ),
 
                           ////*********** HowWeHear Image ***************///
                           ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                Assets.images.selectActionPageImages.hearingTests.path,
+                                Assets.images.selectActionPageImages
+                                    .hearingTests.path,
                                 height: size.height * 0.2,
                                 fit: BoxFit.fill,
                               ))
@@ -227,36 +240,39 @@ class SelectActionPage extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: size.height*0.1,),
+              SizedBox(
+                height: size.height * 0.1,
+              ),
               //////////////************************ Row 3 for philips hearlink __ Hearing Lost Simulator  ***********************///
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ///*************** philips hearlink InkWell **********************************************************///
                   InkWell(
-                    onTap: (){},
+                    onTap: () {},
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.black45,
-                          border:
-                          Border.all(color: MyColors.philips_yellow, width: 3)),
+                          border: Border.all(
+                              color: MyColors.philips_yellow, width: 3)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ////*********** HowWeHear Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                            Text("Philips Hearlink", style: MyTextStyles.medium_1),
+                            child: Text("Philips Hearlink",
+                                style: MyTextStyles.medium_1),
                           ),
 
                           ////*********** Philips Hearlink Image ***************///
                           ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                Assets.images.selectActionPageImages.philipsHearlink.path,
+                                Assets.images.selectActionPageImages
+                                    .philipsHearlink.path,
                                 height: size.height * 0.2,
                                 fit: BoxFit.fill,
                               ))
@@ -264,31 +280,35 @@ class SelectActionPage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   ///*************** Hearing Lost Simulator InkWell **********************************************************///
                   InkWell(
-                    onTap: (){},
+                    onTap: () {
+                      Get.toNamed("SimulatorPage");
+                    },
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
                           color: Colors.black45,
-                          border:
-                          Border.all(color: MyColors.philips_yellow, width: 3)),
+                          border: Border.all(
+                              color: MyColors.philips_yellow, width: 3)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           ////*********** HowWeHear Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
-                            Text("Hearing Lost Simulator", style: MyTextStyles.medium_1),
+                            child: Text("Hearing Lost Simulator",
+                                style: MyTextStyles.medium_1),
                           ),
 
                           ////*********** Hearing Lost Simulator Image ***************///
                           ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                Assets.images.selectActionPageImages.hearingLostSimulator.path,
+                                Assets.images.selectActionPageImages
+                                    .hearingLostSimulator.path,
                                 height: size.height * 0.2,
                                 fit: BoxFit.fill,
                               ))
@@ -298,12 +318,23 @@ class SelectActionPage extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: size.height*0.2,),
-
+              SizedBox(
+                height: size.height * 0.2,
+              ),
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.back();
+        },
+        backgroundColor: MyColors.philips_yellow,
+        elevation: 70,
+        focusColor: Colors.white38,
+        child: const Icon(CupertinoIcons.arrow_left_circle),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
   }
 }

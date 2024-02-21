@@ -9,6 +9,7 @@ environment:
   sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
+  neon_widgets: ^2.0.0
   flutter_card_swiper: ^7.0.0
   firebase_core: ^2.25.4
   cloud_firestore: ^4.15.5

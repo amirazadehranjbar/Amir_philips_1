@@ -9,6 +9,7 @@ environment:
   sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
+  flip_card: ^0.7.0
   neon_widgets: ^2.0.0
   flutter_card_swiper: ^7.0.0
   firebase_core: ^2.25.4
@@ -41,6 +42,9 @@ flutter:
       - assets/images/select_action_page_images/Hearing_Tests.png
       - assets/images/select_action_page_images/philips_hearlink.png
       - assets/images/select_action_page_images/HearingLost_Simulator.png
+      - assets/images/simulator_page_image/forest.png
+      - assets/images/simulator_page_image/ocean_waves.png
+      - assets/images/simulator_page_image/restaurant.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

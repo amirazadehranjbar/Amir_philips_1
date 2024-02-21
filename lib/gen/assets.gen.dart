@@ -15,6 +15,8 @@ class $AssetsImagesGen {
   $AssetsImagesLogoGen get logo => const $AssetsImagesLogoGen();
   $AssetsImagesSelectActionPageImagesGen get selectActionPageImages =>
       const $AssetsImagesSelectActionPageImagesGen();
+  $AssetsImagesSimulatorPageImageGen get simulatorPageImage =>
+      const $AssetsImagesSimulatorPageImageGen();
 }
 
 class $AssetsImagesLogoGen {
@@ -64,6 +66,25 @@ class $AssetsImagesSelectActionPageImagesGen {
         hearingDisorders,
         philipsHearlink
       ];
+}
+
+class $AssetsImagesSimulatorPageImageGen {
+  const $AssetsImagesSimulatorPageImageGen();
+
+  /// File path: assets/images/simulator_page_image/forest.png
+  AssetGenImage get forest =>
+      const AssetGenImage('assets/images/simulator_page_image/forest.png');
+
+  /// File path: assets/images/simulator_page_image/ocean_waves.png
+  AssetGenImage get oceanWaves =>
+      const AssetGenImage('assets/images/simulator_page_image/ocean_waves.png');
+
+  /// File path: assets/images/simulator_page_image/restaurant.png
+  AssetGenImage get restaurant =>
+      const AssetGenImage('assets/images/simulator_page_image/restaurant.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [forest, oceanWaves, restaurant];
 }
 
 class Assets {

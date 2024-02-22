@@ -12,11 +12,24 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesHearingAidGen get hearingAid =>
+      const $AssetsImagesHearingAidGen();
   $AssetsImagesLogoGen get logo => const $AssetsImagesLogoGen();
   $AssetsImagesSelectActionPageImagesGen get selectActionPageImages =>
       const $AssetsImagesSelectActionPageImagesGen();
   $AssetsImagesSimulatorPageImageGen get simulatorPageImage =>
       const $AssetsImagesSimulatorPageImageGen();
+}
+
+class $AssetsImagesHearingAidGen {
+  const $AssetsImagesHearingAidGen();
+
+  /// File path: assets/images/hearing_aid/oticon_2.jpg
+  AssetGenImage get oticon2 =>
+      const AssetGenImage('assets/images/hearing_aid/oticon_2.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [oticon2];
 }
 
 class $AssetsImagesLogoGen {

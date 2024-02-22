@@ -95,9 +95,12 @@ class SelectActionPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  ///*************** Hearing Lost InkWell **********************************************************///
+                  ///*************** How We Hear InkWell **********************************************************///
+                  //TODO:How We Hear InkWell
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed("HowWeHearPageMain");
+                    },
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
@@ -130,6 +133,7 @@ class SelectActionPage extends StatelessWidget {
                   ),
 
                   ///*************** Hearing Disorders InkWell **********************************************************///
+                  //TODO:Hearing Disorders InkWell
                   InkWell(
                     onTap: () {},
                     borderRadius: BorderRadius.circular(15),

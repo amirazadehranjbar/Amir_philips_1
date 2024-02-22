@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:philips_1/my_firebase_options.dart';
 import 'package:philips_1/pages/home_page/home_page.dart';
+import 'package:philips_1/pages/how_we_hear_page/how_we_hear_page_main.dart';
 import 'package:philips_1/pages/select_action_page/select_action_page.dart';
 import 'package:philips_1/pages/select_langauge/select_langauge_page.dart';
 import 'package:philips_1/pages/simulator_page/simulator_page.dart';
@@ -40,6 +41,12 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/SimulatorPage',
             page: () => SimulatorPage(),
+            transition: Transition.fadeIn,
+            curve: Easing.emphasizedAccelerate,
+            transitionDuration: const Duration(seconds: 2)),
+        GetPage(
+            name: '/HowWeHearPageMain',
+            page: () => HowWeHearPageMain(),
             transition: Transition.fadeIn,
             curve: Easing.emphasizedAccelerate,
             transitionDuration: const Duration(seconds: 2)),

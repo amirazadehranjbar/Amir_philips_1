@@ -135,7 +135,8 @@ class SelectActionPage extends StatelessWidget {
                   ///*************** Hearing Disorders InkWell **********************************************************///
                   //TODO:Hearing Disorders InkWell
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                    },
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
@@ -325,6 +326,13 @@ class SelectActionPage extends StatelessWidget {
               SizedBox(
                 height: size.height * 0.2,
               ),
+              /////////////************************* Row 4 for Bottom Sheet ***********************************************///
+              ElevatedButton(onPressed: (){
+                showModalBottomSheet(context: context, builder: (context) {
+                  return Container(height: size.height*0.2,decoration: BoxDecoration(color: Colors.black45),) ;
+                },);
+              }, child: Text("Bottom Sheet", style: MyTextStyles.medium_1)),
+              SizedBox(height: size.height*0.1,)
             ],
           ),
         ),

@@ -1,5 +1,6 @@
 # Project-level configuration.
-cmake_minimum_required(VERSION 3.14)
+#cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 2.8...3.13)
 project(philips_1 LANGUAGES CXX)
 
 # The name of the executable created for the application. Change this to change

@@ -1,20 +1,16 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:philips_1/my_firebase_options.dart';
-import 'package:philips_1/pages/home_page/home_page.dart';
 import 'package:philips_1/pages/how_we_hear_page/how_we_hear_page_main.dart';
 import 'package:philips_1/pages/select_action_page/select_action_page.dart';
 import 'package:philips_1/pages/select_langauge/select_langauge_page.dart';
 import 'package:philips_1/pages/simulator_page/simulator_page.dart';
 
-import 'firebase_options.dart';
-
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
+
   runApp(MyApp());
 }
 
@@ -27,8 +23,16 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.dark(useMaterial3: true),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      theme: ThemeData.dark(),
+      darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.black54),
+                  shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      side: BorderSide(color: Colors.white38, width: 3)))))),
+      themeMode: ThemeMode.dark,
       home: SelectLanguagePage(),
       getPages: [
         GetPage(name: '/', page: () => SelectLanguagePage()),
@@ -50,7 +54,6 @@ class MyApp extends StatelessWidget {
             transition: Transition.fadeIn,
             curve: Easing.emphasizedAccelerate,
             transitionDuration: const Duration(seconds: 2)),
-        // GetPage(name: "/fourth", page: () => Fourth()),
       ],
     );
   }

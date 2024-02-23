@@ -14,6 +14,7 @@ class $AssetsImagesGen {
 
   $AssetsImagesHearingAidGen get hearingAid =>
       const $AssetsImagesHearingAidGen();
+  $AssetsImagesIconsGen get icons => const $AssetsImagesIconsGen();
   $AssetsImagesLogoGen get logo => const $AssetsImagesLogoGen();
   $AssetsImagesSelectActionPageImagesGen get selectActionPageImages =>
       const $AssetsImagesSelectActionPageImagesGen();
@@ -30,6 +31,16 @@ class $AssetsImagesHearingAidGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [oticon2];
+}
+
+class $AssetsImagesIconsGen {
+  const $AssetsImagesIconsGen();
+
+  /// File path: assets/images/icons/home.png
+  AssetGenImage get home => const AssetGenImage('assets/images/icons/home.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [home];
 }
 
 class $AssetsImagesLogoGen {

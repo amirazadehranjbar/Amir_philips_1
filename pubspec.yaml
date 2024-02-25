@@ -53,6 +53,7 @@ flutter:
       - assets/images/simulator_page_image/restaurant.png
       - assets/images/hearing_aid/oticon_2.jpg
       - assets/images/icons/home.png
+      - assets/images/icons/hearing.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -36,11 +36,15 @@ class $AssetsImagesHearingAidGen {
 class $AssetsImagesIconsGen {
   const $AssetsImagesIconsGen();
 
+  /// File path: assets/images/icons/hearing.png
+  AssetGenImage get hearing =>
+      const AssetGenImage('assets/images/icons/hearing.png');
+
   /// File path: assets/images/icons/home.png
   AssetGenImage get home => const AssetGenImage('assets/images/icons/home.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [home];
+  List<AssetGenImage> get values => [hearing, home];
 }
 
 class $AssetsImagesLogoGen {

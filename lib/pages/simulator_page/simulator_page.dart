@@ -195,43 +195,36 @@ class SimulatorPage extends StatelessWidget {
               SizedBox(height: size.height * 0.1),
 
               ///************** Button for Play Sound ************************************************
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Obx(() {
-                    return AnimatedButton(
-                      onPress: () {
-                        controller.handleButtonPress();
-                        if (controller.played.value==true) {
-                          if (controller.ImageIndex.value == 0) {
-                            player.play(AssetSource("restaurant.mp3"));
-                            print("Restaurant");
-                          } else if (controller.ImageIndex.value == 1) {
-                            player.play(AssetSource("ocean.wav"));
-                            print("Ocean");
-                          } else {
-                            player.play(AssetSource("forest.wav"));
-                            print("Forest");
-                          }
-                        } else {
-                          player.stop();
-                        }
-                      },
-                      height: size.height*0.1,
-                      width: size.width*0.6,
-                      text: 'Play',
-                      selectedText: "Stop",
-                      isReverse: true,
-                      selectedTextColor: Colors.blueGrey,
-                      transitionType: TransitionType.LEFT_CENTER_ROUNDER,
-                      textStyle: MyTextStyles.medium_1,
-                      backgroundColor: Colors.black45,
-                      borderColor: Colors.white38,
-                      borderRadius: 50,
-                      borderWidth: 4,
-                    );
-                  })
-                ],
+              AnimatedButton(
+                onPress: () {
+                  controller.handleButtonPress();
+                  if (controller.played.value==true) {
+                    if (controller.ImageIndex.value == 0) {
+                      player.play(AssetSource("restaurant.mp3"));
+                      print("Restaurant");
+                    } else if (controller.ImageIndex.value == 1) {
+                      player.play(AssetSource("ocean.wav"));
+                      print("Ocean");
+                    } else {
+                      player.play(AssetSource("forest.wav"));
+                      print("Forest");
+                    }
+                  } else {
+                    player.stop();
+                  }
+                },
+                height: size.height*0.1,
+                width: size.width*0.6,
+                text: 'Play',
+                selectedText: "Stop",
+                isReverse: true,
+                selectedTextColor: Colors.blueGrey,
+                transitionType: TransitionType.LEFT_CENTER_ROUNDER,
+                textStyle: MyTextStyles.medium_1,
+                backgroundColor: Colors.black45,
+                borderColor: Colors.white38,
+                borderRadius: 50,
+                borderWidth: 4,
               )
             ],
           ),

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:philips_1/gen/assets.gen.dart';
 import 'package:sizer/sizer.dart';
 
 class MyNavBarBottom extends StatelessWidget {
@@ -26,7 +27,7 @@ class MyNavBarBottom extends StatelessWidget {
           }
         },
         tabs: const [
-          GButton(icon: Icons.home_filled,text: "Shope",),
+          GButton(icon:Icons.hearing,text: "Shope",),
           GButton(icon: Icons.shopping_bag,text: "Card",)
         ],),
     );;

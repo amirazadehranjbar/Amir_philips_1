@@ -2,11 +2,13 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:get/get.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:philips_1/pages/simulator_page/nav_bar_component.dart';
 import 'package:philips_1/pages/simulator_page/simulating_controller.dart';
+import 'package:sizer/sizer.dart';
 import '../../gen/assets.gen.dart';
 import '../../text_styles_colors/my_colors.dart';
 import '../../text_styles_colors/text_styles.dart';
@@ -197,8 +199,8 @@ class SimulatorPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Obx(() {
-                    return IconButton(
-                      onPressed: () {
+                    return AnimatedButton(
+                      onPress: () {
                         controller.handleButtonPress();
                         if (controller.played.value==true) {
                           if (controller.ImageIndex.value == 0) {
@@ -215,9 +217,18 @@ class SimulatorPage extends StatelessWidget {
                           player.stop();
                         }
                       },
-                      icon: controller.iconPlayed.value,
-                      color: Colors.teal,
-                      iconSize: 30,
+                      height: size.height*0.1,
+                      width: size.width*0.6,
+                      text: 'Play',
+                      selectedText: "Stop",
+                      isReverse: true,
+                      selectedTextColor: Colors.blueGrey,
+                      transitionType: TransitionType.LEFT_CENTER_ROUNDER,
+                      textStyle: MyTextStyles.medium_1,
+                      backgroundColor: Colors.black45,
+                      borderColor: Colors.white38,
+                      borderRadius: 50,
+                      borderWidth: 4,
                     );
                   })
                 ],

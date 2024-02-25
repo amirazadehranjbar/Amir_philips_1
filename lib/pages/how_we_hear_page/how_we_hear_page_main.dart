@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:philips_1/gen/assets.gen.dart';
 import 'package:philips_1/text_styles_colors/my_colors.dart';
 import 'package:philips_1/text_styles_colors/text_styles.dart';
+import 'package:sizer/sizer.dart';
 
 
 class HowWeHearPageMain extends StatelessWidget {
@@ -14,10 +15,10 @@ class HowWeHearPageMain extends StatelessWidget {
   List<Container> cards = [
     Container(
       alignment: Alignment.center,
-      child: const Text('1'),
       color: Colors.blue,
-      height: 100,
-      width: 100,
+      height: 20.h,
+      width: 10.w,
+      child: const Text('1'),
     ),
     Container(
       alignment: Alignment.center,
@@ -37,7 +38,7 @@ class HowWeHearPageMain extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white38,
@@ -49,19 +50,19 @@ class HowWeHearPageMain extends StatelessWidget {
           backgroundColor: MyColors.philips_yellow,
           shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(width: 4, color: MyColors.philips_blue),
+            borderSide: BorderSide(width: 3.sp, color: MyColors.philips_blue),
           ),
           centerTitle: true,
-          toolbarHeight: size.height * 0.1,
+          toolbarHeight: 8.h,
           leading: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(2.sp),
             child: IconButton(
               onPressed: () {
                 Get.back();
               },
               icon: Image.asset(
                 Assets.images.icons.home.path,
-                height: size.height * 0.1,
+                height: 8.h,
               ),
             ),
           ),
@@ -76,7 +77,7 @@ class HowWeHearPageMain extends StatelessWidget {
                 frontWidget: _buildFrontWidget(),
                 innerWidget: _buildInnerWidget(),
                 cellSize: Size(MediaQuery.of(context).size.width, 140),
-                padding: const EdgeInsets.all(15),
+                padding: EdgeInsets.all(10.sp),
                 animationDuration: const Duration(milliseconds: 300),
                 borderRadius: 10,
                 onOpen: () => print('cell opened'),
@@ -123,7 +124,7 @@ class HowWeHearPageMain extends StatelessWidget {
               onPressed: () => _foldingCellKey?.currentState?.toggleFold(),
               style: TextButton.styleFrom(
                 backgroundColor: Colors.white,
-                minimumSize: const Size(80, 40),
+                minimumSize:  Size(30.sp, 15.sp),
               ),
               child: const Text(
                 "OPEN",
@@ -139,7 +140,7 @@ class HowWeHearPageMain extends StatelessWidget {
   Widget _buildInnerWidget() {
     return Container(
       color: const Color(0xFFecf2f9),
-      padding: const EdgeInsets.only(top: 10),
+      padding:  EdgeInsets.only(top: 6.sp),
       child: Stack(
         children: [
           Align(
@@ -157,7 +158,7 @@ class HowWeHearPageMain extends StatelessWidget {
             alignment: Alignment.center,
             child: Image.asset(
               Assets.images.hearingAid.oticon2.path,
-              width: 200,
+              width: 20.h,
             ),
           ),
           Align(
@@ -174,7 +175,7 @@ class HowWeHearPageMain extends StatelessWidget {
               onPressed: () => _foldingCellKey?.currentState?.toggleFold(),
               style: TextButton.styleFrom(
                 backgroundColor: Colors.white,
-                minimumSize: const Size(80, 40),
+                minimumSize: Size(30.sp, 15.sp),
               ),
               child: const Text(
                 "Close",

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../text_styles_colors/my_colors.dart';
@@ -115,7 +116,7 @@ class SelectActionPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text("How We Hear",
-                                style: MyTextStyles.medium_1),
+                                style: MyTextStyles.small_1),
                           ),
 
                           ////*********** Hearing Lost Image ***************///
@@ -151,7 +152,7 @@ class SelectActionPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text("Hearing Disorders",
-                                style: MyTextStyles.medium_1),
+                                style: MyTextStyles.small_1),
                           ),
 
                           ////*********** HowWeHear Image ***************///
@@ -193,7 +194,7 @@ class SelectActionPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text("Hearing Lost",
-                                style: MyTextStyles.medium_1),
+                                style: MyTextStyles.small_1),
                           ),
 
                           ////*********** HowWeHear Image ***************///
@@ -227,7 +228,7 @@ class SelectActionPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text("Hearing Test",
-                                style: MyTextStyles.medium_1),
+                                style: MyTextStyles.small_1),
                           ),
 
                           ////*********** HowWeHear Image ***************///
@@ -269,7 +270,7 @@ class SelectActionPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text("Philips Hearlink",
-                                style: MyTextStyles.medium_1),
+                                style: MyTextStyles.small_1),
                           ),
 
                           ////*********** Philips Hearlink Image ***************///
@@ -304,8 +305,8 @@ class SelectActionPage extends StatelessWidget {
                           ////*********** HowWeHear Text ***************///
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text("Hearing Lost Simulator",
-                                style: MyTextStyles.medium_1),
+                            child: Text("Hearing Lost \n Simulator",
+                                style: TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w200 ,color: Colors.white70,fontSize: 10.sp)),
                           ),
 
                           ////*********** Hearing Lost Simulator Image ***************///
@@ -331,7 +332,7 @@ class SelectActionPage extends StatelessWidget {
                 showModalBottomSheet(context: context, builder: (context) {
                   return Container(height: size.height*0.2,decoration: BoxDecoration(color: Colors.black45),) ;
                 },);
-              }, child: Text("Bottom Sheet", style: MyTextStyles.medium_1)),
+              }, child: Text("Bottom Sheet", style: MyTextStyles.small_1)),
               SizedBox(height: size.height*0.1,)
             ],
           ),

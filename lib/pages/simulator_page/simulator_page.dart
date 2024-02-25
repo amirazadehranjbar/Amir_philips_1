@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:get/get.dart';
 import 'package:neon_widgets/neon_widgets.dart';
+import 'package:philips_1/pages/simulator_page/nav_bar_component.dart';
 import 'package:philips_1/pages/simulator_page/simulating_controller.dart';
 import '../../gen/assets.gen.dart';
 import '../../text_styles_colors/my_colors.dart';
@@ -112,6 +113,7 @@ class SimulatorPage extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: MyNavBarBottom(),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.vertical,

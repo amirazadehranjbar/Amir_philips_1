@@ -54,6 +54,11 @@ flutter:
       - assets/images/hearing_aid/oticon_2.jpg
       - assets/images/icons/home.png
       - assets/images/icons/hearing.png
+      - assets/images/hearing_test/hearing_test1.png
+      - assets/images/hearing_test/hearing_test2.png
+      - assets/images/hearing_test/hearing_test3.png
+      - assets/images/hearing_test/hearing_test4.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

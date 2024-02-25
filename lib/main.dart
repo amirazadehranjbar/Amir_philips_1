@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:philips_1/pages/hearing_test_page/hearing_test_page.dart';
 import 'package:philips_1/pages/how_we_hear_page/how_we_hear_page_main.dart';
 import 'package:philips_1/pages/select_action_page/select_action_page.dart';
 import 'package:philips_1/pages/select_langauge/select_langauge_page.dart';
@@ -56,6 +57,14 @@ class MyApp extends StatelessWidget {
               transition: Transition.fadeIn,
               curve: Easing.emphasizedAccelerate,
               transitionDuration: const Duration(seconds: 2)),
+
+          GetPage(
+              name: '/HearingTestPage',
+              page: () => HearingTestPage(),
+              transition: Transition.fadeIn,
+              curve: Easing.emphasizedAccelerate,
+              transitionDuration: const Duration(seconds: 2)),
+
         ],
       ),
     );

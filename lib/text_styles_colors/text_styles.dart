@@ -3,6 +3,11 @@ import 'package:sizer/sizer.dart';
 
 class MyTextStyles {
 
+  static TextStyle small_0 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w200 ,color: Colors.white70,fontSize: 10.sp);
+  static TextStyle medium_0 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w400 ,color: Colors.white70,fontSize: 12.sp);
+  static TextStyle large_0 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w600 ,color: Colors.white70,fontSize: 14.sp);
+  static TextStyle xlarge_0 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w800 ,color: Colors.white70,fontSize: 16.sp);
+
   static TextStyle small_1 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w200 ,color: Colors.white70,fontSize: 18.sp);
   static TextStyle medium_1 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w400 ,color: Colors.white70,fontSize: 20.sp);
   static TextStyle large_1 =  TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w600 ,color: Colors.white70,fontSize: 22.sp);

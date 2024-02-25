@@ -213,7 +213,7 @@ class SelectActionPage extends StatelessWidget {
 
                   ///*************** Hearing Test InkWell **********************************************************///
                   InkWell(
-                    onTap: () {},
+                    onTap: () {Get.toNamed("HearingTestPage");},
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
                       decoration: BoxDecoration(
@@ -340,7 +340,7 @@ class SelectActionPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.back();
+          Get.toNamed("/");
         },
         backgroundColor: MyColors.philips_yellow,
         elevation: 70,

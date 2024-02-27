@@ -1,12 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:philips_1/models/hearing_test_model.dart';
-import 'package:philips_1/pages/hearing_test_page/hearing_test_component.dart';
 import 'package:philips_1/text_styles_colors/my_colors.dart';
 import 'package:sizer/sizer.dart';
-
 import '../../gen/assets.gen.dart';
 import '../../text_styles_colors/text_styles.dart';
 import 'hearing_test_list.dart';
@@ -14,9 +10,28 @@ import 'hearing_test_list.dart';
 class HearingTestPage extends StatelessWidget {
   const HearingTestPage({Key? key});
 
-
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
+    /// Create List For Smooth Page Indicator *****************************************
+    final pages = List.generate(
+        6,
+        (index) => Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                color: Colors.teal.shade600,
+              ),
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              child: Container(
+                height: 280,
+                child: Center(
+                    child: Text(
+                  "Page $index",
+                  style: TextStyle(color: Colors.indigo),
+                )),
+              ),
+            ));
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -62,17 +77,18 @@ class HearingTestPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ListBuilderImages(),
-
               ],
             ),
-            SizedBox(height: 20.h,)
+            SizedBox(
+              height: 20.h,
+            )
           ],
         ),
       ),
@@ -118,12 +134,32 @@ class ListBuilderImages extends StatelessWidget {
                         hearingTests[index].imagePath,
                         height: 80.sp,
                         width: 150.sp,
-                        fit: BoxFit.cover,),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    Divider(color: MyColors.philips_yellow,thickness: 3,),
+                    Divider(
+                      color: MyColors.philips_yellow,
+                      thickness: 3,
+                      indent: 6,
+                      endIndent: 6,
+                    ),
                     //******* Test Name ***********
-                    Text(hearingTests[index].name,style: MyTextStyles.small_0,)
-
+                    Text(
+                      hearingTests[index].name,
+                      style: MyTextStyles.small_0,
+                    ),
+                    SizedBox(
+                      height: 5.sp,
+                    ),
+                    //******* Description *********
+                    Text(hearingTests[index].description,
+                        style: MyTextStyles.small_0),
+                    SizedBox(height: 5.sp),
+                    //***** Button For See More *******
+                    ElevatedButton(
+                        onPressed: () {},
+                        child: Text("See More", style: MyTextStyles.small_0)),
+                    SizedBox(height: 5.sp),
                   ],
                 ),
               ),

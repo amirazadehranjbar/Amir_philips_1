@@ -60,6 +60,11 @@ flutter:
       - assets/images/hearing_test/hearing_test2.png
       - assets/images/hearing_test/hearing_test3.png
       - assets/images/hearing_test/hearing_test4.png
+      - assets/images/hearing_disorders/Dis_1.png
+      - assets/images/hearing_disorders/Dis_2.png
+      - assets/images/hearing_disorders/Dis_3.png
+      - assets/images/hearing_disorders/Dis_4.png
+      - assets/images/hearing_disorders/Dis_5.png
 
   #   - images/a_dot_ham.jpeg
 

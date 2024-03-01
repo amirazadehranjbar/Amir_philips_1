@@ -14,6 +14,8 @@ class $AssetsImagesGen {
 
   $AssetsImagesHearingAidGen get hearingAid =>
       const $AssetsImagesHearingAidGen();
+  $AssetsImagesHearingDisordersGen get hearingDisorders =>
+      const $AssetsImagesHearingDisordersGen();
   $AssetsImagesHearingTestGen get hearingTest =>
       const $AssetsImagesHearingTestGen();
   $AssetsImagesIconsGen get icons => const $AssetsImagesIconsGen();
@@ -33,6 +35,33 @@ class $AssetsImagesHearingAidGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [oticon2];
+}
+
+class $AssetsImagesHearingDisordersGen {
+  const $AssetsImagesHearingDisordersGen();
+
+  /// File path: assets/images/hearing_disorders/Dis_1.png
+  AssetGenImage get dis1 =>
+      const AssetGenImage('assets/images/hearing_disorders/Dis_1.png');
+
+  /// File path: assets/images/hearing_disorders/Dis_2.png
+  AssetGenImage get dis2 =>
+      const AssetGenImage('assets/images/hearing_disorders/Dis_2.png');
+
+  /// File path: assets/images/hearing_disorders/Dis_3.png
+  AssetGenImage get dis3 =>
+      const AssetGenImage('assets/images/hearing_disorders/Dis_3.png');
+
+  /// File path: assets/images/hearing_disorders/Dis_4.png
+  AssetGenImage get dis4 =>
+      const AssetGenImage('assets/images/hearing_disorders/Dis_4.png');
+
+  /// File path: assets/images/hearing_disorders/Dis_5.png
+  AssetGenImage get dis5 =>
+      const AssetGenImage('assets/images/hearing_disorders/Dis_5.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [dis1, dis2, dis3, dis4, dis5];
 }
 
 class $AssetsImagesHearingTestGen {

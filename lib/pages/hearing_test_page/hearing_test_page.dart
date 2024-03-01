@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
 import 'package:philips_1/text_styles_colors/my_colors.dart';
 import 'package:sizer/sizer.dart';
@@ -12,26 +13,8 @@ class HearingTestPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
 
     /// Create List For Smooth Page Indicator *****************************************
-    final pages = List.generate(
-        6,
-        (index) => Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.teal.shade600,
-              ),
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-              child: Container(
-                height: 280,
-                child: Center(
-                    child: Text(
-                  "Page $index",
-                  style: TextStyle(color: Colors.indigo),
-                )),
-              ),
-            ));
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -45,7 +28,7 @@ class HearingTestPage extends StatelessWidget {
         // Add your drawer content here
         backgroundColor: Colors.blueGrey,
         elevation: 50,
-        width: 60.w,
+        width:  Adaptive.w(60),
         child: Column(
           children: [
             DrawerHeader(
@@ -87,8 +70,13 @@ class HearingTestPage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 20.h,
-            )
+              height:  Adaptive.h(6),
+            ),
+
+            //******************************************************************
+
+            //******************************************************************
+
           ],
         ),
       ),
@@ -105,19 +93,19 @@ class ListBuilderImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 400.sp,
-        width: 150.sp,
+        height:  Adaptive.h(90),
+        width:  Adaptive.w(40),
         child: ListView.builder(
           itemCount: hearingTests.length,
-          padding: EdgeInsets.all(8.sp),
+          padding: EdgeInsets.all(4.dp),
           scrollDirection: Axis.vertical,
           dragStartBehavior: DragStartBehavior.start,
           clipBehavior: Clip.antiAlias,
-          physics: const BouncingScrollPhysics(),
+          physics: const ClampingScrollPhysics(),
           itemBuilder: (context, index) {
             return SizedBox(
-              height: 150.sp,
-              width: 150.sp,
+              height:  Adaptive.h(60),
+              width:  Adaptive.w(40),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
@@ -132,8 +120,8 @@ class ListBuilderImages extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
                         hearingTests[index].imagePath,
-                        height: 80.sp,
-                        width: 150.sp,
+                        height:  Adaptive.h(20),
+                        width:  Adaptive.w(20),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -149,17 +137,17 @@ class ListBuilderImages extends StatelessWidget {
                       style: MyTextStyles.small_0,
                     ),
                     SizedBox(
-                      height: 5.sp,
+                      height:  Adaptive.h(4),
                     ),
                     //******* Description *********
                     Text(hearingTests[index].description,
                         style: MyTextStyles.small_0),
-                    SizedBox(height: 5.sp),
+                    SizedBox(height:  Adaptive.h(4)),
                     //***** Button For See More *******
                     ElevatedButton(
                         onPressed: () {},
                         child: Text("See More", style: MyTextStyles.small_0)),
-                    SizedBox(height: 5.sp),
+                    SizedBox(height:  Adaptive.h(10)),
                   ],
                 ),
               ),
@@ -168,3 +156,5 @@ class ListBuilderImages extends StatelessWidget {
         ));
   }
 }
+
+//***************************************************************

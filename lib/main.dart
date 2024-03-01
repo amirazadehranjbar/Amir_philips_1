@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
+import 'package:philips_1/pages/hearing_disorders/hearing_desorders.dart';
 import 'package:philips_1/pages/hearing_test_page/hearing_test_page.dart';
 import 'package:philips_1/pages/how_we_hear_page/how_we_hear_page_main.dart';
 import 'package:philips_1/pages/select_action_page/select_action_page.dart';
@@ -22,8 +24,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Sizer(
-      builder:(context, orientation, deviceType) =>  GetMaterialApp(
+    return FlutterSizer(
+      builder:(context, orientation, screenType) =>  GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData.dark(),
@@ -64,9 +66,17 @@ class MyApp extends StatelessWidget {
               transition: Transition.fadeIn,
               curve: Easing.emphasizedAccelerate,
               transitionDuration: const Duration(seconds: 2)),
+          GetPage(
+              name: '/HearingDisordersPage',
+              page: () => HearingDisordersPage(),
+              transition: Transition.fadeIn,
+              curve: Easing.emphasizedAccelerate,
+              transitionDuration: const Duration(seconds: 2)),
 
         ],
       ),
     );
   }
 }
+
+

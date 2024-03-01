@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -12,7 +13,6 @@ class SelectActionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return Scaffold(
       ///******************** App Bar ***************************************************************************///
       appBar: AppBar(
@@ -25,14 +25,14 @@ class SelectActionPage extends StatelessWidget {
             borderSide: BorderSide(color: MyColors.philips_yellow, width: 3),
             borderRadius: BorderRadius.circular(10)),
         backgroundColor: Colors.black45,
-        toolbarHeight: size.height * 0.1,
+        toolbarHeight:  Adaptive.h(10),
         elevation: 30,
         actions: [
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 8, 60, 8),
             child: Image.asset(
               Assets.images.logo.philipsShield.path,
-              height: size.height * 0.1,
+              height:  Adaptive.h(10),
             ),
           )
         ],
@@ -91,7 +91,7 @@ class SelectActionPage extends StatelessWidget {
             children: [
               //////////////************************ Row 1 for How We Hear __ Hearing Disorders ***********************///
               SizedBox(
-                height: size.height * 0.1,
+                height:  Adaptive.h(10),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -125,7 +125,7 @@ class SelectActionPage extends StatelessWidget {
                               child: Image.asset(
                                 Assets.images.selectActionPageImages.howWeHear
                                     .path,
-                                height: size.height * 0.2,
+                                height:  Adaptive.h(20),
                                 fit: BoxFit.fill,
                               ))
                         ],
@@ -137,6 +137,7 @@ class SelectActionPage extends StatelessWidget {
                   //TODO:Hearing Disorders InkWell
                   InkWell(
                     onTap: () {
+                      Get.toNamed("HearingDisordersPage");
                     },
                     borderRadius: BorderRadius.circular(15),
                     child: Container(
@@ -161,7 +162,7 @@ class SelectActionPage extends StatelessWidget {
                               child: Image.asset(
                                 Assets.images.selectActionPageImages
                                     .hearingDisorders.path,
-                                height: size.height * 0.2,
+                                height:  Adaptive.h(20),
                                 fit: BoxFit.fill,
                               ))
                         ],
@@ -171,7 +172,7 @@ class SelectActionPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: size.height * 0.1,
+                height:  Adaptive.h(10),
               ),
               //////////////************************ Row 2 for Hearing Lost __ Hearing Test ***********************///
               Row(
@@ -203,7 +204,7 @@ class SelectActionPage extends StatelessWidget {
                               child: Image.asset(
                                 Assets.images.selectActionPageImages.hearingLost
                                     .path,
-                                height: size.height * 0.2,
+                                height:  Adaptive.h(20),
                                 fit: BoxFit.fill,
                               ))
                         ],
@@ -237,7 +238,7 @@ class SelectActionPage extends StatelessWidget {
                               child: Image.asset(
                                 Assets.images.selectActionPageImages
                                     .hearingTests.path,
-                                height: size.height * 0.2,
+                                height:  Adaptive.h(20),
                                 fit: BoxFit.fill,
                               ))
                         ],
@@ -247,7 +248,7 @@ class SelectActionPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: size.height * 0.1,
+                height:  Adaptive.h(10),
               ),
               //////////////************************ Row 3 for philips hearlink __ Hearing Lost Simulator  ***********************///
               Row(
@@ -279,7 +280,7 @@ class SelectActionPage extends StatelessWidget {
                               child: Image.asset(
                                 Assets.images.selectActionPageImages
                                     .philipsHearlink.path,
-                                height: size.height * 0.2,
+                                height:  Adaptive.h(20),
                                 fit: BoxFit.fill,
                               ))
                         ],
@@ -306,7 +307,7 @@ class SelectActionPage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text("Hearing Lost \n Simulator",
-                                style: TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w200 ,color: Colors.white70,fontSize: 10.sp)),
+                                style: TextStyle(fontFamily: "Dubai" , fontWeight: FontWeight.w200 ,color: Colors.white70,fontSize: 10.dp)),
                           ),
 
                           ////*********** Hearing Lost Simulator Image ***************///
@@ -315,7 +316,7 @@ class SelectActionPage extends StatelessWidget {
                               child: Image.asset(
                                 Assets.images.selectActionPageImages
                                     .hearingLostSimulator.path,
-                                height: size.height * 0.2,
+                                height:  Adaptive.h(20),
                                 fit: BoxFit.fill,
                               ))
                         ],
@@ -325,15 +326,15 @@ class SelectActionPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: size.height * 0.2,
+                height:  Adaptive.h(20),
               ),
               /////////////************************* Row 4 for Bottom Sheet ***********************************************///
               ElevatedButton(onPressed: (){
                 showModalBottomSheet(context: context, builder: (context) {
-                  return Container(height: size.height*0.2,decoration: BoxDecoration(color: Colors.black45),) ;
+                  return Container(height:  Adaptive.h(20),decoration: BoxDecoration(color: Colors.black45),) ;
                 },);
               }, child: Text("Bottom Sheet", style: MyTextStyles.small_1)),
-              SizedBox(height: size.height*0.1,)
+              SizedBox(height:  Adaptive.h(10),)
             ],
           ),
         ),

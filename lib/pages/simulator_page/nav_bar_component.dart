@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:philips_1/gen/assets.gen.dart';
-import 'package:sizer/sizer.dart';
+
+
 
 class MyNavBarBottom extends StatelessWidget {
   const MyNavBarBottom({super.key});
@@ -11,6 +10,7 @@ class MyNavBarBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: Adaptive.h(20),
       child:  GNav(color: Colors.blueGrey,
         backgroundColor: Colors.black12,
         activeColor: Colors.deepPurple,
@@ -18,7 +18,7 @@ class MyNavBarBottom extends StatelessWidget {
         tabActiveBorder: Border.all(color: Colors.white38,width: 3),
         tabBackgroundColor: Colors.black54,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        padding: EdgeInsets.all(1.5.h),
+        padding: EdgeInsets.all(Adaptive.h(4)),
         onTabChange: (value) {
           if(value==0){
 
@@ -30,6 +30,6 @@ class MyNavBarBottom extends StatelessWidget {
           GButton(icon:Icons.hearing,text: "Shope",),
           GButton(icon: Icons.shopping_bag,text: "Card",)
         ],),
-    );;
+    );
   }
 }

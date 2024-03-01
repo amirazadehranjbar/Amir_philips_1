@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:folding_cell/folding_cell/widget.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,23 +17,23 @@ class HowWeHearPageMain extends StatelessWidget {
     Container(
       alignment: Alignment.center,
       color: Colors.blue,
-      height: 20.h,
-      width: 10.w,
+      height:  Adaptive.h(10),
+      width:  Adaptive.w(10),
       child: const Text('1'),
     ),
     Container(
       alignment: Alignment.center,
       child: const Text('2'),
       color: Colors.red,
-      height: 100,
-      width: 100,
+      height:  Adaptive.h(10),
+      width:  Adaptive.w(10),
     ),
     Container(
       alignment: Alignment.center,
       child: const Text('3'),
       color: Colors.purple,
-      height: 100,
-      width: 100,
+      height:  Adaptive.h(10),
+      width:  Adaptive.w(10),
     )
   ];
 
@@ -50,19 +51,19 @@ class HowWeHearPageMain extends StatelessWidget {
           backgroundColor: MyColors.philips_yellow,
           shape: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
-            borderSide: BorderSide(width: 3.sp, color: MyColors.philips_blue),
+            borderSide: BorderSide(width: 3.dp, color: MyColors.philips_blue),
           ),
           centerTitle: true,
-          toolbarHeight: 8.h,
+          toolbarHeight: Adaptive.h(10),
           leading: Padding(
-            padding: EdgeInsets.all(2.sp),
+            padding: EdgeInsets.all(2.dp),
             child: IconButton(
               onPressed: () {
                 Get.back();
               },
               icon: Image.asset(
                 Assets.images.icons.home.path,
-                height: 8.h,
+                height:  Adaptive.h(10),
               ),
             ),
           ),
@@ -77,7 +78,7 @@ class HowWeHearPageMain extends StatelessWidget {
                 frontWidget: _buildFrontWidget(),
                 innerWidget: _buildInnerWidget(),
                 cellSize: Size(MediaQuery.of(context).size.width, 140),
-                padding: EdgeInsets.all(10.sp),
+                padding: EdgeInsets.all(10.dp),
                 animationDuration: const Duration(milliseconds: 300),
                 borderRadius: 10,
                 onOpen: () => print('cell opened'),
@@ -124,7 +125,7 @@ class HowWeHearPageMain extends StatelessWidget {
               onPressed: () => _foldingCellKey?.currentState?.toggleFold(),
               style: TextButton.styleFrom(
                 backgroundColor: Colors.white,
-                minimumSize:  Size(30.sp, 15.sp),
+                minimumSize:  Size(30.dp, 15.dp),
               ),
               child: const Text(
                 "OPEN",
@@ -140,7 +141,7 @@ class HowWeHearPageMain extends StatelessWidget {
   Widget _buildInnerWidget() {
     return Container(
       color: const Color(0xFFecf2f9),
-      padding:  EdgeInsets.only(top: 6.sp),
+      padding:  EdgeInsets.only(top: 6.dp),
       child: Stack(
         children: [
           Align(
@@ -149,7 +150,7 @@ class HowWeHearPageMain extends StatelessWidget {
               "CARD TITLE",
               style: GoogleFonts.aldrich(
                 color: const Color(0xFF2e282a),
-                fontSize: 22.0,
+                fontSize: 22.dp,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -158,7 +159,7 @@ class HowWeHearPageMain extends StatelessWidget {
             alignment: Alignment.center,
             child: Image.asset(
               Assets.images.hearingAid.oticon2.path,
-              width: 20.h,
+              width:  Adaptive.h(20),
             ),
           ),
           Align(
@@ -175,7 +176,7 @@ class HowWeHearPageMain extends StatelessWidget {
               onPressed: () => _foldingCellKey?.currentState?.toggleFold(),
               style: TextButton.styleFrom(
                 backgroundColor: Colors.white,
-                minimumSize: Size(30.sp, 15.sp),
+                minimumSize: Size(30.dp, 15.dp),
               ),
               child: const Text(
                 "Close",

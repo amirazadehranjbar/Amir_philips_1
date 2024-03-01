@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:get/get.dart';
 import 'package:philips_1/gen/assets.gen.dart';
 import 'package:philips_1/pages/select_action_page/select_action_page.dart';
@@ -10,7 +11,6 @@ class SelectLanguagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         ///*******************    App Bar   ***********************************************************////
@@ -24,14 +24,14 @@ class SelectLanguagePage extends StatelessWidget {
               borderSide: BorderSide(color: MyColors.philips_yellow, width: 3),
               borderRadius: BorderRadius.circular(10)),
           backgroundColor: Colors.black45,
-          toolbarHeight: size.height * 0.1,
+          toolbarHeight: Adaptive.h(10),
           elevation: 30,
           actions: [
             Padding(
               padding: const EdgeInsets.fromLTRB(30, 8, 60, 8),
               child: Image.asset(
                 Assets.images.logo.philipsShield.path,
-                height: size.height * 0.1,
+                height: Adaptive.h(10),
               ),
             )
           ],
@@ -42,7 +42,7 @@ class SelectLanguagePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: size.height * 0.1,
+                height: Adaptive.h(10),
               ),
 
               ///*******************    English Text Select Language   ***********************************************************////
@@ -60,7 +60,7 @@ class SelectLanguagePage extends StatelessWidget {
                     style: MyTextStyles.medium_1,
                   )),
               SizedBox(
-                height: size.height * 0.1,
+                height: Adaptive.h(10),
               ),
 
               ///*******************    Arabic Text Select Language ***********************************************************////
@@ -78,7 +78,7 @@ class SelectLanguagePage extends StatelessWidget {
                     style: MyTextStyles.medium_1,
                   )),
               SizedBox(
-                height: size.height * 0.1,
+                height: Adaptive.h(10),
               ),
 
               ///*******************    Button for Select Language ***********************************************************////

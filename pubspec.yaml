@@ -9,6 +9,7 @@ environment:
   sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
+  full_screen_image: ^2.0.0
   google_nav_bar: ^5.0.6
   flutter_sizer: ^1.0.4
   flutter_animated_button: ^2.0.3

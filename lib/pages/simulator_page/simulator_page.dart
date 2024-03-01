@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
+import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:full_screen_image/full_screen_image.dart';
 import 'package:get/get.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:philips_1/pages/simulator_page/nav_bar_component.dart';
@@ -20,9 +22,6 @@ class SimulatorPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery
-        .of(context)
-        .size;
     final controller = Get.put(SimulatorController());
 
     ///***************** Environment Image List   ************************************************///
@@ -39,12 +38,20 @@ class SimulatorPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               border: Border.all(color: Colors.white70, width: 4),
               color: MyColors.philips_blue),
-          height: size.height * 0.4,
-          width: size.width * 0.4,
-          child: Image.asset(
-            Assets.images.simulatorPageImage.oceanWaves.path,
-            height: size.height * 0.4,
-            width: size.width * 0.4,
+          height:  Adaptive.h(50),
+          width:  Adaptive.w(50),
+          child: FullScreenWidget(
+            disposeLevel: DisposeLevel.Medium,
+            child: Hero(
+              tag: "customTag",
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(
+                  Assets.images.simulatorPageImage.oceanWaves.path,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
         ),
       ),
@@ -60,12 +67,20 @@ class SimulatorPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               border: Border.all(color: Colors.white70, width: 4),
               color: MyColors.philips_blue),
-          height: size.height * 0.4,
-          width: size.width * 0.4,
-          child: Image.asset(
-            Assets.images.simulatorPageImage.forest.path,
-            height: size.height * 0.4,
-            width: size.width * 0.4,
+          height:  Adaptive.h(40),
+          width:  Adaptive.w(40),
+          child: FullScreenWidget(
+            disposeLevel: DisposeLevel.Medium,
+            child: Hero(
+              tag: "customTag",
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(
+                  Assets.images.simulatorPageImage.forest.path,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
         ),
       ),
@@ -81,12 +96,20 @@ class SimulatorPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               border: Border.all(color: Colors.white70, width: 4),
               color: MyColors.philips_blue),
-          height: size.height * 0.4,
-          width: size.width * 0.4,
-          child: Image.asset(
-            Assets.images.simulatorPageImage.restaurant.path,
-            height: size.height * 0.4,
-            width: size.width * 0.4,
+          height:  Adaptive.h(20),
+          width:  Adaptive.w(20),
+          child:  FullScreenWidget(
+            disposeLevel: DisposeLevel.Medium,
+            child: Hero(
+              tag: "customTag",
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Image.asset(
+                  Assets.images.simulatorPageImage.restaurant.path,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
         ),
       ),
@@ -103,14 +126,14 @@ class SimulatorPage extends StatelessWidget {
             borderSide: BorderSide(color: MyColors.philips_yellow, width: 3),
             borderRadius: BorderRadius.circular(10)),
         backgroundColor: Colors.black45,
-        toolbarHeight: size.height * 0.1,
+        toolbarHeight: Adaptive.h(10),
         elevation: 30,
         actions: [
           Padding(
             padding: const EdgeInsets.fromLTRB(30, 8, 60, 8),
             child: Image.asset(
               Assets.images.logo.philipsShield.path,
-              height: size.height * 0.1,
+              height: Adaptive.h(10),
             ),
           )
         ],
@@ -145,8 +168,8 @@ class SimulatorPage extends StatelessWidget {
                   ///************** Select Environment Image **************************************************
                   Flexible(
                     child: SizedBox(
-                      height: size.height * 0.4,
-                      width: size.width * 0.4,
+                      height: Adaptive.h(40),
+                      width: Adaptive.w(40),
                       child: CardSwiper(
                         cardsCount: cards.length,
                         onSwipe: (previousIndex, currentIndex, direction) {
@@ -167,18 +190,18 @@ class SimulatorPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: size.height * 0.02,
+                height: Adaptive.h(4),
               ),
               NeonLine(
                 spreadColor: Colors.brown,
                 lightSpreadRadius: 30,
                 lightBlurRadius: 90,
-                lineWidth: size.width * 0.8,
+                lineWidth: Adaptive.w(10),
                 lineHeight: 0.3,
                 lineColor: Colors.brown.shade100,
               ),
               SizedBox(
-                height: size.height * 0.1,
+                height: Adaptive.h(4),
               ),
 
               ///************** Play Sound ***********************************************************
@@ -192,7 +215,7 @@ class SimulatorPage extends StatelessWidget {
                     padding: EdgeInsets.all(8.0),
                     child: Text("Play the degree of hearing loss"),
                   )),
-              SizedBox(height: size.height * 0.1),
+              SizedBox(height: Adaptive.h(10),),
 
               ///************** Button for Play Sound ************************************************
               AnimatedButton(
@@ -213,8 +236,8 @@ class SimulatorPage extends StatelessWidget {
                     player.stop();
                   }
                 },
-                height: size.height*0.1,
-                width: size.width*0.6,
+                height: Adaptive.h(10),
+                width: Adaptive.w(10),
                 text: 'Play',
                 selectedText: "Stop",
                 isReverse: true,
